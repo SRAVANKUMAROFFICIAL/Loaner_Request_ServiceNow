@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c192abbf83df3210fa20a6d0deaad3d2" extends="task" label="Loaner Request" max_length="40" name="x_1893212_loaner_0_loaner_request" type="collection">
+        <element attributes="encode_utf8=false" label="Requested For" mandatory="true" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="100" name="other" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Santana Clara" label="Depot" max_length="40" name="depot" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Sydney" value="sydney"/>
+                <element inactive_on_update="false" label="London" value="London"/>
+                <element inactive_on_update="false" label="Santa Clara" value="sc"/>
+                <element inactive_on_update="false" label="Singapore" value="Singapore"/>
+                <element inactive_on_update="false" label="New York" value="ny"/>
+                <element inactive_on_update="false" label="Other" value="other"/>
+                <element inactive_on_update="false" label="Buenos Aires" value="ba"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Laptop" label="Item Type" max_length="40" name="item_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Projector" value="cmdb_ci_projector"/>
+                <element inactive_on_update="false" label="Laptop" value="cmdb_ci_computer"/>
+                <element inactive_on_update="false" label="Mobile Phone" value="cmdb_ci_mobile_device"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Location To be Used" max_length="255" name="location_to_be_used" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="13" label="State Choice" max_length="40" name="state_choice" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Deployment Prep" sequence="3" value="15"/>
+                <element inactive_on_update="false" label="Ready For Pickup" sequence="5" value="16"/>
+                <element inactive_on_update="false" label="Closed Complete" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Reserved" sequence="6" value="14"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="13"/>
+                <element inactive_on_update="false" label="Checked Out" sequence="1" value="17"/>
+                <element inactive_on_update="false" label="Post Deployment" sequence="4" value="18"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="end_date" type="glide_date_time"/>
+        <element label="Pick up reminder" max_length="255" name="pick_up_reminder" type="glide_date_time"/>
+    </element>
+</database>
