@@ -34,5 +34,6 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="end_date" type="glide_date_time"/>
+        <element label="Pick up reminder" max_length="255" name="pick_up_reminder" type="glide_date_time"/>
     </element>
 </database>
